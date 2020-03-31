@@ -1,0 +1,42 @@
+title: TODO list
+summary: |
+  Gets sample TODO list item
+description: |
+  Gets sample TODO list item from `jsonplaceholder`
+website: https://github.com/GDG-Wroclaw/bitrise-step-todo-list
+source_code_url: https://github.com/GDG-Wroclaw/bitrise-step-todo-list
+support_url: https://github.com/GDG-Wroclaw/bitrise-step-todo-list/issues
+published_at: 2020-03-31T19:08:58.293416+02:00
+source:
+  git: https://github.com/GDG-Wroclaw/bitrise-step-todo-list.git
+  commit: 00262055c5b7935c9cd084ed3737adf68614efd3
+host_os_tags:
+- osx-10.10
+- ubuntu-16.04
+type_tags:
+- utility
+toolkit:
+  bash:
+    entry_file: step.sh
+deps:
+  brew:
+  - name: jq
+  - name: curl
+  apt_get:
+  - name: jq
+  - name: curl
+is_requires_admin_user: true
+is_always_run: false
+is_skippable: false
+run_if: ""
+inputs:
+- item_id: null
+  opts:
+    is_expand: true
+    is_required: true
+    title: Item id
+    value_options: []
+outputs:
+- TODO_ITEM_TEXT: null
+  opts:
+    title: Item text
